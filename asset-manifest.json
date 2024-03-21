@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/personal_website/static/css/main.ac7e1faf.css",
+    "main.css": "/personal_website/static/css/main.0d7cb2cb.css",
     "main.js": "/personal_website/static/js/main.f558a15d.js",
     "static/js/453.0bd92e5f.chunk.js": "/personal_website/static/js/453.0bd92e5f.chunk.js",
     "static/media/main_background.jpg": "/personal_website/static/media/main_background.516dfcfcb6a525dc4b52.jpg",
@@ -19,12 +19,12 @@
     "static/media/Decalotype-Regular.woff2": "/personal_website/static/media/Decalotype-Regular.1894e12cde01d1d7ab0b.woff2",
     "static/media/Decalotype-Light.woff2": "/personal_website/static/media/Decalotype-Light.342e02f1a73f7e9f6945.woff2",
     "index.html": "/personal_website/index.html",
-    "main.ac7e1faf.css.map": "/personal_website/static/css/main.ac7e1faf.css.map",
+    "main.0d7cb2cb.css.map": "/personal_website/static/css/main.0d7cb2cb.css.map",
     "main.f558a15d.js.map": "/personal_website/static/js/main.f558a15d.js.map",
     "453.0bd92e5f.chunk.js.map": "/personal_website/static/js/453.0bd92e5f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac7e1faf.css",
+    "static/css/main.0d7cb2cb.css",
     "static/js/main.f558a15d.js"
   ]
 }
