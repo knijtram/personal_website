@@ -1,0 +1,18 @@
+@import "../variables";
+
+.Error-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .Error-title {
+    font-size: 10rem;
+    font-weight: bold;
+  }
+  .Error-subtitle {
+    font-size: 1.5rem;
+  }
+}
