@@ -1,0 +1,29 @@
+@import "./Functions";
+
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem-calc(10px);
+  font-size: rem-calc(20px);
+  padding: rem-calc(8px, 30px);
+  border-radius: rem-calc(25px);
+  border: 3px solid var(--primary_color);
+  background: var(--white);
+  color: var(--primary_color);
+  text-shadow: 1px 1px var(--black);
+  transition: background 0.25s, color 0.25s ease;
+
+  &:hover {
+    cursor: pointer;
+    background: var(--primary_color);
+    color: var(--white);
+  }
+}
+
+.Title {
+  margin-bottom: rem-calc(8px);
+  font-size: rem-calc(60px);
+  font-weight: bold;
+  color: var(--secondary_color);
+}

@@ -1,0 +1,138 @@
+@import "../../../Functions";
+
+.Section-3 {
+  position: relative;
+  background-color: var(--secondary_color);
+  padding-top: rem-calc(75px);
+
+  .Title {
+    width: fit-content;
+    padding: rem-calc(8px, 31px);
+    margin-left: rem-calc(28px);
+    margin-bottom: 0;
+    border-radius: 0 10px 10px 0;
+    background: var(--white);
+    color: var(--secondary_color);
+  }
+
+  $margin-left: rem-calc(31px);
+  .Timeline {
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    padding: rem-calc(10px, 0px, 75px, 0px);
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: rem-calc(6px);
+      background-color: white;
+      top: 0;
+      bottom: 0;
+      left: $margin-left;
+      margin-left: rem-calc(-3px);
+    }
+
+    .Timeline-container {
+      width: fit-content;
+      padding: rem-calc(10px, 25px);
+      position: relative;
+      background-color: inherit;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: rem-calc(25px);
+        height: rem-calc(25px);
+        right: rem-calc(-17px);
+        background-color: white;
+        border: 4px solid var(--primary_color);
+        top: rem-calc(15px);
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      &.right {
+        left: $margin-left;
+
+        &:before {
+          content: " ";
+          height: 0;
+          position: absolute;
+          top: rem-calc(22px);
+          width: 0;
+          z-index: 1;
+          left: rem-calc(15px);
+          border: medium solid white;
+          border-width: 10px 10px 10px 0;
+          border-color: transparent white transparent transparent;
+        }
+
+        &:after {
+          left: rem-calc(-18px);
+        }
+      }
+
+      .Timeline-containerContent {
+        padding: rem-calc(15px, 50px, 15px, 40px);
+        background-color: white;
+        position: relative;
+        border-radius: 6px;
+
+        .Timeline-containerContent-subtitle {
+          color: var(--grey);
+        }
+
+        .Timeline-containerContent-content {
+          margin-top: rem-calc(10px);
+        }
+      }
+    }
+  }
+
+  .Text-patternWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .Text-pattern {
+      width: 200%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      -webkit-mask-image: url("../../../assets/images/code-design-text-repeat.svg");
+      mask-image: url("../../../assets/images/code-design-text-repeat.svg");
+      background-color: var(--white);
+      opacity: 0.05;
+      animation: pan linear 90s infinite;
+    }
+  }
+}
+
+@keyframes pan {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+@media screen and (max-width: 1400px) {
+  .Section-3 {
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .Section-3 {
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .Section-3 {
+  }
+}

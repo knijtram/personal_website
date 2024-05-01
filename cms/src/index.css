@@ -1,119 +1,163 @@
 /** DECALOTYPE REGULAR FONTS WEIGHTS */
 @font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-Light.woff2") format("woff");
-  font-weight: 100;
-  font-style: normal;
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-Light.woff2") format("woff");
+    font-weight: 100;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-Regular.woff2") format("woff");
-  font-weight: 200;
-  font-style: normal;
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-Regular.woff2") format("woff");
+    font-weight: 200;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-Regular.woff2") format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-Regular.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-Medium.woff2") format("woff");
-  font-weight: 300;
-  font-style: normal;
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-Medium.woff2") format("woff");
+    font-weight: 300;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-SemiBold.woff2") format("woff");
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-SemiBold.woff2") format("woff");
+    font-weight: 400;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-Bold.woff2") format("woff");
-  font-weight: 500;
-  font-style: normal;
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-Bold.woff2") format("woff");
+    font-weight: 500;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-Bold.woff2") format("woff");
-  font-weight: bold;
-  font-style: normal;
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-Bold.woff2") format("woff");
+    font-weight: bold;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-ExtraBold.woff2") format("woff");
-  font-weight: 600;
-  font-style: normal;
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-ExtraBold.woff2") format("woff");
+    font-weight: 600;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-Black.woff2") format("woff");
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-Black.woff2") format("woff");
+    font-weight: 700;
+    font-style: normal;
 }
 
 /** DECALOTYPE ITALIC FONTS WEIGHTS */
 @font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-LightItalic.woff2") format("woff");
-  font-weight: 100;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-Italic.woff2") format("woff");
-  font-weight: 200;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-Italic.woff2") format("woff");
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-MediumItalic.woff2") format("woff");
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-SemiBoldItalic.woff2") format("woff");
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-BoldItalic.woff2") format("woff");
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-BoldItalic.woff2") format("woff");
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-ExtraBoldItalic.woff2") format("woff");
-  font-weight: 600;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Decalotype";
-  src: url("assets/fonts/decalotype/Decalotype-BlackItalic.woff2") format("woff");
-  font-weight: 700;
-  font-style: italic;
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-LightItalic.woff2") format("woff");
+    font-weight: 100;
+    font-style: italic;
 }
 
+@font-face {
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-Italic.woff2") format("woff");
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-Italic.woff2") format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-MediumItalic.woff2") format("woff");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-SemiBoldItalic.woff2") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-BoldItalic.woff2") format("woff");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-BoldItalic.woff2") format("woff");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-ExtraBoldItalic.woff2") format("woff");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Decalotype";
+    src: url("assets/fonts/decalotype/Decalotype-BlackItalic.woff2") format("woff");
+    font-weight: 700;
+    font-style: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary_color: #f9b17a;
+    --secondary_color: #676f9d;
+    --background_color: #2d3250;
+    --background_color_lighter: #424769;
+    --black: #000000;
+    --grey: #cccccc;
+    --lighter_grey: #dedede;
+    --light_grey: #efefef;
+    --white: #ffffff;
+}
 
 body {
-  margin: 0;
-  font-family: Decalotype, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: Decalotype, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background-color: #dcdcdc;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #838383;
+    border-radius: 5px;
 }

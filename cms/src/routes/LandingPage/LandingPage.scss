@@ -1,0 +1,30 @@
+@import "../../Functions";
+
+.App {
+  .Section-separatorTop {
+    position: relative;
+    z-index: 10;
+
+    @include create-spikes-top-up(var(--white));
+  }
+  .Section-separatorBottom {
+    position: relative;
+    z-index: 10;
+
+    @include create-spikes-bottom-down(var(--white));
+  }
+}
+
+@keyframes pan {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .App {
+  }
+}

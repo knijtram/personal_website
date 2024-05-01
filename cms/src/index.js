@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import Root from './routes/Root'
+import LandingPage from './routes/LandingPage/LandingPage';
+import Root from './Root'
 import Error from './routes/Error'
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <App />
+                element: <LandingPage />
             },
             {
                 path: "*",

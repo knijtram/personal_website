@@ -1,0 +1,94 @@
+@function rem-calc($value, $value2: null, $value3: null, $value4: null, $base-font-size: 16px) {
+  $rem-values: ();
+
+  $rem-values: append($rem-values, calc($value / $base-font-size * 1rem));
+
+  @if $value2 {
+    $rem-values: append($rem-values, calc($value2 / $base-font-size * 1rem));
+  }
+
+  @if $value3 {
+    $rem-values: append($rem-values, calc($value3 / $base-font-size * 1rem));
+  }
+
+  @if $value4 {
+    $rem-values: append($rem-values, calc($value4 / $base-font-size * 1rem));
+  }
+
+  @return $rem-values;
+}
+
+@mixin create-spikes-top-up($color: var(--white)) {
+  &:after {
+    --a: 90deg;
+    --s: 50px;
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: $color;
+    left: 0;
+    top: -30px;
+    height: 30px;
+
+    -webkit-mask: conic-gradient(from calc(180deg - var(--a) / 2) at top, #0000, #000 1deg var(--a), #0000 calc(var(--a) + 1deg)) 50%/var(--s);
+    mask: conic-gradient(from calc(180deg - var(--a) / 2) at top, #0000, #000 1deg var(--a), #0000 calc(var(--a) + 1deg)) 50%/var(--s);
+  }
+}
+
+@mixin create-spikes-top-down($color: var(--white)) {
+  &:after {
+    --a: 90deg;
+    --s: 50px;
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: $color;
+    left: 0;
+    top: 0;
+    height: 30px;
+
+    -webkit-mask: conic-gradient(from calc(var(--a) / 2) at bottom, #0000, #000 1deg var(--a), #0000 calc(var(--a) + 1deg)) 50%/var(--s);
+    mask: conic-gradient(from calc(var(--a) / 2) at bottom, #0000, #000 1deg var(--a), #0000 calc(var(--a) + 1deg)) 50%/var(--s);
+  }
+}
+
+@mixin create-spikes-bottom-up($color: var(--white)) {
+  &:after {
+    --a: 90deg;
+    --s: 50px;
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: $color;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+
+    -webkit-mask: conic-gradient(from calc(180deg - var(--a) / 2) at top, #0000, #000 1deg var(--a), #0000 calc(var(--a) + 1deg)) 50%/var(--s);
+    mask: conic-gradient(from calc(180deg - var(--a) / 2) at top, #0000, #000 1deg var(--a), #0000 calc(var(--a) + 1deg)) 50%/var(--s);
+  }
+}
+
+@mixin create-spikes-bottom-down($color: var(--white)) {
+  &:after {
+    --a: 90deg;
+    --s: 50px;
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: $color;
+    left: 0;
+    bottom: -30px;
+    height: 30px;
+
+    -webkit-mask: conic-gradient(from calc(var(--a) / -2) at bottom, #0000, #000 1deg var(--a), #0000 calc(var(--a) + 1deg)) 50%/var(--s);
+    mask: conic-gradient(from calc(var(--a) / -2) at bottom, #0000, #000 1deg var(--a), #0000 calc(var(--a) + 1deg)) 50%/var(--s);
+  }
+}
+
+
+
