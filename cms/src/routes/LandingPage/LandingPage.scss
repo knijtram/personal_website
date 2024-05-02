@@ -1,0 +1,147 @@
+@import "../../Functions";
+
+.App {
+  .App-loadingWrapper {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    animation: background-up 3s ease;
+    animation-delay: 4.5s;
+    animation-fill-mode: forwards;
+
+    .App-loadingWrapper-backgrounds {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      animation: background-panning 2s ease;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
+
+      div {
+        height: 100%;
+        width: 100%;
+      }
+
+      div:nth-child(1) {
+        top: 0;
+        background: var(--primary_color);
+      }
+
+      div:nth-child(2) {
+        background: var(--secondary_color);
+      }
+
+      div:nth-child(3) {
+        background: var(--white);
+      }
+    }
+
+    .App-loadingWrapper-textsWrapper {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 120px;
+      min-width: 590px;
+      overflow: hidden;
+      font-size: rem-calc(100px);
+
+      .App-loadingWrapper-texts {
+        animation: text-panning 2s ease;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+
+        & > div:nth-child(1) {
+          color: var(--secondary_color);
+        }
+
+        & > div:nth-child(2) {
+          color: var(--primary_color);
+        }
+
+        & > div:nth-child(3) {
+          display: flex;
+          gap: 20px;
+          font-weight: bold;
+          letter-spacing: 1px;
+
+          & > div:nth-child(1) {
+            color: var(--primary_color);
+            text-shadow: 2px 2px var(--black);
+          }
+
+          & > div:nth-child(2) {
+            color: var(--white);
+            text-shadow: 2px 2px var(--black);
+          }
+        }
+      }
+    }
+
+    @include create-spikes-bottom-down(var(--white));
+  }
+
+  .Section-separatorTop {
+    position: relative;
+    z-index: 10;
+
+    @include create-spikes-top-up(var(--white));
+  }
+
+  .Section-separatorBottom {
+    position: relative;
+    z-index: 10;
+
+    @include create-spikes-bottom-down(var(--white));
+  }
+}
+
+@keyframes background-panning {
+  0% {
+    top: 0;
+  }
+  60% {
+    top: -100%;
+  }
+  100% {
+    top: -200%;
+  }
+}
+
+@keyframes text-panning {
+  0% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-34%);
+  }
+  100% {
+    transform: translateY(-67%);
+  }
+}
+
+@keyframes background-up {
+  0% {
+    top: 0;
+  }
+  33% {
+    top: -60%;
+  }
+  66% {
+    top: -85%;
+  }
+  100% {
+    top: -110%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .App {
+  }
+}

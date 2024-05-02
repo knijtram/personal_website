@@ -1,0 +1,14 @@
+@import "../Functions";
+
+.Section-separatorTop {
+  position: relative;
+  z-index: 10;
+
+  @include create-spikes-top-up(var(--white));
+}
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: rem-calc(15px);
+}

@@ -1,0 +1,118 @@
+@import "../../../Functions";
+
+.Section-1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+
+  .Quote {
+    position: absolute;
+    width: fit-content;
+    top: 20%;
+    z-index: 3;
+    font-size: rem-calc(125px);
+    background: var(--white);
+    color: var(--primary_color);
+    text-shadow: 2px 2px var(--black);
+    padding: rem-calc(5px, 25px);
+    border-radius: rem-calc(5px);
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .Earth {
+    position: absolute;
+    bottom: rem-calc(-200px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 800px;
+    height: 800px;
+    background: url(https://web.archive.org/web/20150807125159if_/http://www.noirextreme.com/digital/Earth-Color4096.jpg);
+    border-radius: 50%;
+    background-size: 1610px;
+    box-shadow: inset 8px 36px 80px 36px rgb(0, 0, 0), inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);
+    animation-name: rotate;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 60s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-direction: reverse;
+    @keyframes rotate {
+      from {
+        background-position: 0px 0px;
+      }
+      to {
+        background-position: 1610px 0px;
+      }
+    }
+    @-webkit-keyframes rotate {
+      from {
+        background-position: 0px 0px;
+      }
+      to {
+        background-position: 1610px 0px;
+      }
+    }
+  }
+
+  .Text-patternWrapper {
+    width: 100%;
+    height: 100%;
+    background: var(--primary_color);
+    overflow: hidden;
+
+    .Text-pattern {
+      position: fixed;
+      width: 200%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      -webkit-mask-image: url("../../../assets/images/code-design-text-repeat.svg");
+      mask-image: url("../../../assets/images/code-design-text-repeat.svg");
+      background-color: var(--white);
+      opacity: 0.05;
+      animation: pan linear 90s infinite;
+    }
+  }
+}
+
+@keyframes pan {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+@media screen and (max-width: 1400px) {
+  .Section-1 {
+    .Quote {
+      font-size: rem-calc(100px);
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .Section-1 {
+    .Quote {
+      font-size: rem-calc(75px);
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .Section-1 {
+    .Quote {
+      font-size: rem-calc(50px);
+    }
+  }
+}
