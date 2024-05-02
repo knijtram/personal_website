@@ -51,7 +51,7 @@ function Section2() {
                     exceed expectations. Let's connect and discuss how we can work together to bring your ideas to life!
                 </div>
                 <div className="Socials">
-                    <div className="Button">Mail me</div>
+                    <a onClick={(event) => { window.open('mailto:mgakuipers@gmail.com', 'mail'); event.preventDefault();} } href="mailto:mgakuipers@gmail.com" target="_blank" className="Button">Mail me</a>
                     <TiSocialInstagram className="Icon" onClick={() => openSocialPage('instagram')}/>
                     <TiSocialFacebook className="Icon" onClick={() => openSocialPage('facebook')}/>
                     <TiSocialLinkedin className="Icon" onClick={() => openSocialPage('linkedin')}/>
