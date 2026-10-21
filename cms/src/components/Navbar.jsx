@@ -1,36 +1,29 @@
 import './Navbar.scss';
 
-import React, {useState} from 'react';
+import React from 'react';
 import {Link} from "react-router-dom";
-import {ReactComponent as BurgerMenu} from './../assets/icons/burger-menu.svg';
-import videoSource from "../assets/videos/background-overlay.mp4";
 
 function Navbar() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const toggleMenu = () => {
-        setIsMenuOpen(prevState => !prevState);
-    };
+    const links = [
+        {label: '~/about', href: '/#about'},
+        {label: '~/work', href: '/#work'},
+        {label: '~/toolkit', href: '/#toolkit'},
+    ];
 
     return (
-        <>
-            <div className="Navbar">
-                <Link className="Navbar-title" to="/">
-                    <div className="Firstname">Martijn</div>
-                    <div className="Lastname">Kuipers</div>
+        <header className="Navbar">
+            <nav className="Navbar-nav Container">
+                <Link className="Navbar-logo" to="/">
+                    <span className="Code">&lt;</span>mk<span className="Design">.</span><span className="Code">/&gt;</span>
                 </Link>
-                <BurgerMenu className="Navbar-menuIcon" onClick={() => toggleMenu()}/>
-            </div>
-
-            <div className={`Menu-overlay ${isMenuOpen ? 'Show' : ''}`}>
-                <video width="100%" height="auto" autoPlay loop muted>
-                    <source src={videoSource} type="video/mp4"/>
-                </video>
-                <div className="Content">
-                    <div>Coming</div>
-                    <div>Soon</div>
+                <div className="Navbar-links">
+                    {links.map((link) => (
+                        <a key={link.href} className="Navbar-link" href={link.href}>{link.label}</a>
+                    ))}
+                    <a className="Navbar-link Highlight" href="/#contact">contact()</a>
                 </div>
-            </div>
-        </>
+            </nav>
+        </header>
     );
 }
 

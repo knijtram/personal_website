@@ -1,129 +1,51 @@
-/** DECALOTYPE REGULAR FONTS WEIGHTS */
+/** BRICOLAGE GROTESQUE FONT WEIGHTS */
 @font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-Light.woff2") format("woff");
-    font-weight: 100;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-Regular.woff2") format("woff");
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-Regular.woff2") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-Medium.woff2") format("woff");
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-SemiBold.woff2") format("woff");
+    font-family: "Bricolage Grotesque";
+    src: url("assets/fonts/bricolage-grotesque/BricolageGrotesque-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-Bold.woff2") format("woff");
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-Bold.woff2") format("woff");
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-ExtraBold.woff2") format("woff");
+    font-family: "Bricolage Grotesque";
+    src: url("assets/fonts/bricolage-grotesque/BricolageGrotesque-SemiBold.woff2") format("woff2");
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-Black.woff2") format("woff");
-    font-weight: 700;
+    font-family: "Bricolage Grotesque";
+    src: url("assets/fonts/bricolage-grotesque/BricolageGrotesque-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
     font-style: normal;
+    font-display: swap;
 }
 
-/** DECALOTYPE ITALIC FONTS WEIGHTS */
+/** JETBRAINS MONO FONT WEIGHTS */
 @font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-LightItalic.woff2") format("woff");
-    font-weight: 100;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-Italic.woff2") format("woff");
-    font-weight: 200;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-Italic.woff2") format("woff");
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-MediumItalic.woff2") format("woff");
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-SemiBoldItalic.woff2") format("woff");
+    font-family: "JetBrains Mono";
+    src: url("assets/fonts/jetbrains-mono/JetBrainsMono-Regular.woff2") format("woff2");
     font-weight: 400;
-    font-style: italic;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-BoldItalic.woff2") format("woff");
+    font-family: "JetBrains Mono";
+    src: url("assets/fonts/jetbrains-mono/JetBrainsMono-Medium.woff2") format("woff2");
     font-weight: 500;
-    font-style: italic;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-BoldItalic.woff2") format("woff");
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-ExtraBoldItalic.woff2") format("woff");
-    font-weight: 600;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Decalotype";
-    src: url("assets/fonts/decalotype/Decalotype-BlackItalic.woff2") format("woff");
+    font-family: "JetBrains Mono";
+    src: url("assets/fonts/jetbrains-mono/JetBrainsMono-Bold.woff2") format("woff2");
     font-weight: 700;
-    font-style: italic;
+    font-style: normal;
+    font-display: swap;
 }
 
 * {
@@ -133,21 +55,53 @@
 }
 
 :root {
-    --primary_color: #f9b17a;
-    --secondary_color: #676f9d;
-    --background_color: #2d3250;
-    --background_color_lighter: #424769;
-    --black: #000000;
-    --grey: #cccccc;
-    --lighter_grey: #dedede;
-    --light_grey: #efefef;
+    /* accents */
+    --primary_color: #ff9a57;
+    --secondary_color: #7ab4ff;
+
+    /* backgrounds */
+    --background_color: #0e0e11;
+    --background_color_darker: #0a0a0c;
+    --background_color_lighter: #131317;
+    --background_color_light: #17171c;
+    --background_color_lightest: #1a1a20;
+    --chip_color: #1d1d23;
+    --dot_grid_color: #2c2c34;
+    --grid_line_color: #383842;
+
+    /* borders */
+    --border_color: #26262c;
+    --border_color_light: #2a2a31;
+    --border_color_lighter: #3a3a42;
+
+    /* text */
+    --text_color: #edebe4;
+    --text_color_soft: #c9c7c0;
+    --text_color_muted: #a9a7a0;
+    --text_color_subtle: #8c8a84;
+    --text_color_faint: #4a4a52;
     --white: #ffffff;
+
+    /* fonts */
+    --font_display: "Bricolage Grotesque", system-ui, sans-serif;
+    --font_code: "JetBrains Mono", monospace;
+    --font_serif: Georgia, serif;
 }
 
 body {
-    font-family: Decalotype, sans-serif;
+    font-family: var(--font_display);
+    background: var(--background_color);
+    color: var(--text_color);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: var(--text_color);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--white);
 }
 
 /* For WebKit browsers (Chrome, Safari) */
@@ -155,9 +109,9 @@ body {
     width: 12px;
 }
 ::-webkit-scrollbar-track {
-    background-color: #dcdcdc;
+    background-color: var(--background_color);
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #838383;
+    background-color: var(--border_color_lighter);
     border-radius: 5px;
 }

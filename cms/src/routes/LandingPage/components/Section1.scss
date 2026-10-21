@@ -1,118 +1,266 @@
 @import "../../../Functions";
 
 .Section-1 {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-
-  .Quote {
-    position: absolute;
-    width: fit-content;
-    top: 20%;
-    z-index: 3;
-    font-size: rem-calc(125px);
-    background: var(--white);
-    color: var(--primary_color);
-    text-shadow: 2px 2px var(--black);
-    padding: rem-calc(5px, 25px);
-    border-radius: rem-calc(5px);
-    font-weight: bold;
-    text-align: center;
+  .Section-1-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: rem-calc(64px);
+    padding-top: rem-calc(96px);
+    padding-bottom: rem-calc(72px);
   }
 
-  .Earth {
-    position: absolute;
-    bottom: rem-calc(-200px);
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    width: 800px;
-    height: 800px;
-    background: url(https://web.archive.org/web/20150807125159if_/http://www.noirextreme.com/digital/Earth-Color4096.jpg);
-    border-radius: 50%;
-    background-size: 1610px;
-    box-shadow: inset 8px 36px 80px 36px rgb(0, 0, 0), inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);
-    animation-name: rotate;
-    animation-duration: 60s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: reverse;
-    -webkit-animation-name: rotate;
-    -webkit-animation-duration: 60s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-direction: reverse;
-    @keyframes rotate {
-      from {
-        background-position: 0px 0px;
+  .Hero {
+    flex: 999 1 rem-calc(560px);
+    min-width: 0;
+    display: flex;
+    gap: rem-calc(28px);
+
+    .Hero-lineNumbers {
+      padding-top: rem-calc(18px);
+      font-family: var(--font_code);
+      font-size: rem-calc(14px);
+      line-height: 2;
+      color: var(--text_color_faint);
+      text-align: right;
+      user-select: none;
+    }
+
+    .Hero-content {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: rem-calc(32px);
+    }
+
+    .Hero-kicker {
+      font-family: var(--font_code);
+      font-size: rem-calc(14px);
+      color: var(--text_color_muted);
+    }
+
+    .Hero-title {
+      font-size: clamp(#{rem-calc(52px)}, 8vw, #{rem-calc(112px)});
+      line-height: 0.95;
+      font-weight: 800;
+      letter-spacing: -0.045em;
+
+      .Hero-title-code {
+        font-family: var(--font_code);
+        font-weight: 500;
+        letter-spacing: -0.06em;
+
+        .Brace {
+          color: var(--secondary_color);
+        }
       }
-      to {
-        background-position: 1610px 0px;
+
+      .Hero-title-pixels {
+        position: relative;
+        display: inline-block;
+        padding: rem-calc(0px, 10px);
+        outline: 1.5px solid var(--primary_color);
+        outline-offset: 2px;
+
+        .Handle {
+          @include selection-handle(var(--primary_color));
+
+          &.TopLeft {
+            left: rem-calc(-7px);
+            top: rem-calc(-7px);
+          }
+          &.TopRight {
+            right: rem-calc(-7px);
+            top: rem-calc(-7px);
+          }
+          &.BottomLeft {
+            left: rem-calc(-7px);
+            bottom: rem-calc(-7px);
+          }
+          &.BottomRight {
+            right: rem-calc(-7px);
+            bottom: rem-calc(-7px);
+          }
+        }
+
+        .Size {
+          position: absolute;
+          left: 50%;
+          bottom: rem-calc(-40px);
+          transform: translateX(-50%);
+          padding: rem-calc(3px, 8px);
+          border-radius: rem-calc(4px);
+          background: var(--primary_color);
+          color: var(--background_color);
+          font-family: var(--font_code);
+          font-size: rem-calc(12px);
+          font-weight: 500;
+          letter-spacing: 0;
+          white-space: nowrap;
+        }
       }
     }
-    @-webkit-keyframes rotate {
-      from {
-        background-position: 0px 0px;
-      }
-      to {
-        background-position: 1610px 0px;
-      }
+
+    .Hero-text {
+      max-width: rem-calc(520px);
+      margin-top: rem-calc(18px);
+      font-size: rem-calc(20px);
+      line-height: 1.55;
+      color: var(--text_color_soft);
+    }
+
+    .Hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem-calc(12px);
     }
   }
 
-  .Text-patternWrapper {
-    width: 100%;
-    height: 100%;
-    background: var(--primary_color);
+  .Preview {
+    flex: 1 1 rem-calc(380px);
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border_color_light);
+    border-radius: rem-calc(16px);
     overflow: hidden;
+    background: var(--background_color_lighter);
 
-    .Text-pattern {
-      position: fixed;
-      width: 200%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      -webkit-mask-image: url("../../../assets/images/code-design-text-repeat.svg");
-      mask-image: url("../../../assets/images/code-design-text-repeat.svg");
-      background-color: var(--white);
-      opacity: 0.05;
-      animation: pan linear 90s infinite;
+    .Preview-bar {
+      display: flex;
+      align-items: center;
+      gap: rem-calc(8px);
+      padding: rem-calc(12px, 16px);
+      border-bottom: 1px solid var(--border_color_light);
+      font-family: var(--font_code);
+      font-size: rem-calc(12px);
+      color: var(--text_color_subtle);
+
+      .Dot {
+        width: rem-calc(10px);
+        height: rem-calc(10px);
+        border-radius: 50%;
+        background: var(--border_color_lighter);
+        transition: background 0.2s ease;
+
+        &.Dot-Red:hover {
+          background: red;
+        }
+        &.Dot-Yellow:hover {
+          background: yellow;
+        }
+        &.Dot-Green:hover {
+          background: green;
+        }
+      }
+      .Filename {
+        margin-left: rem-calc(10px);
+        color: var(--text_color);
+      }
+      .Label {
+        margin-left: auto;
+      }
+    }
+
+    .Preview-code {
+      padding: rem-calc(20px, 20px, 18px);
+      border: none;
+      border-bottom: 1px dashed var(--border_color_light);
+      border-radius: 0;
+      font-size: rem-calc(13px);
+      line-height: 1.75;
+
+      .Cursor {
+        display: inline-block;
+        width: rem-calc(8px);
+        height: rem-calc(16px);
+        margin-left: rem-calc(2px);
+        vertical-align: -3px;
+        background: var(--secondary_color);
+        animation: blink 1.1s infinite;
+      }
+    }
+
+    .Preview-canvas {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding: rem-calc(56px, 24px, 60px);
+      background-color: var(--background_color_light);
+      @include dot-grid(var(--dot_grid_color), 16px);
+
+      .Preview-canvas-element {
+        position: relative;
+      }
+
+      .Preview-button {
+        display: inline-flex;
+        align-items: center;
+        padding: rem-calc(14px, 28px);
+        border-radius: rem-calc(999px);
+        background: var(--text_color);
+        color: var(--background_color);
+        font-size: rem-calc(17px);
+        font-weight: 600;
+      }
+
+      .Measure {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        font-family: var(--font_code);
+        font-size: rem-calc(11px);
+        color: var(--primary_color);
+
+        .Line {
+          flex: 1;
+          background: var(--primary_color);
+        }
+
+        &.Width {
+          left: 0;
+          right: 0;
+          top: rem-calc(-26px);
+          gap: rem-calc(6px);
+
+          .Line {
+            height: 1px;
+          }
+        }
+
+        &.Height {
+          right: rem-calc(-44px);
+          top: 0;
+          bottom: 0;
+          flex-direction: column;
+          gap: rem-calc(4px);
+
+          .Line {
+            width: 1px;
+          }
+        }
+      }
     }
   }
 }
 
-@keyframes pan {
-  0% {
-    transform: translateX(-50%);
+@keyframes blink {
+  0%, 49% {
+    opacity: 1;
   }
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-
-@media screen and (max-width: 1400px) {
-  .Section-1 {
-    .Quote {
-      font-size: rem-calc(100px);
-    }
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  .Section-1 {
-    .Quote {
-      font-size: rem-calc(75px);
-    }
+  50%, 100% {
+    opacity: 0;
   }
 }
 
 @media screen and (max-width: 850px) {
   .Section-1 {
-    .Quote {
-      font-size: rem-calc(50px);
+    .Section-1-wrapper {
+      padding-top: rem-calc(64px);
+    }
+
+    .Hero {
+      gap: rem-calc(16px);
     }
   }
 }

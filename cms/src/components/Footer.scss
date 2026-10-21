@@ -1,14 +1,28 @@
 @import "../Functions";
 
-.Section-separatorTop {
-  position: relative;
-  z-index: 10;
-
-  @include create-spikes-top-up(var(--white));
-}
 .Footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: rem-calc(15px);
+  border-top: 1px solid var(--border_color);
+  background: var(--background_color_darker);
+
+  .Footer-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: rem-calc(8px, 24px);
+    padding-top: rem-calc(14px);
+    padding-bottom: rem-calc(14px);
+    font-family: var(--font_code);
+    font-size: rem-calc(12px);
+    color: var(--text_color_subtle);
+  }
+
+  .Footer-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem-calc(20px);
+
+    .Branch {
+      color: var(--secondary_color);
+    }
+  }
 }

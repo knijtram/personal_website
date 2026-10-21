@@ -1,0 +1,168 @@
+@import "../../../Functions";
+
+.Section-4 {
+  border-top: 1px solid var(--border_color);
+
+  .Section-4-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: rem-calc(56px);
+    padding-top: rem-calc(120px);
+    padding-bottom: rem-calc(120px);
+  }
+
+  .Work-title {
+    display: inline-block;
+    animation: log-in 0.4s ease both;
+  }
+
+  .Work-toggle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: rem-calc(4px);
+    font-family: var(--font_code);
+    font-size: rem-calc(14px);
+    color: var(--text_color_subtle);
+
+    .Work-toggle-command {
+      margin-right: rem-calc(6px);
+    }
+
+    .Work-toggle-option {
+      padding: rem-calc(8px, 12px);
+      border: 1px solid var(--border_color_lighter);
+      border-radius: rem-calc(999px);
+      background: transparent;
+      color: var(--text_color_muted);
+      font: inherit;
+      transition: background 0.25s, border-color 0.25s, color 0.25s ease;
+
+      &:hover {
+        cursor: pointer;
+        border-color: var(--text_color_soft);
+        color: var(--white);
+      }
+
+      &.Active {
+        border-color: var(--text_color);
+        background: var(--text_color);
+        color: var(--background_color);
+      }
+    }
+  }
+
+  .Work {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+    .Work-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: rem-calc(24px, 40px);
+      padding: rem-calc(32px, 0px);
+      border-top: 1px solid var(--border_color);
+      animation: log-in 0.4s ease both;
+
+      // Stagger the entries so the log appears one commit at a time
+      @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{($i - 1) * 0.05}s;
+        }
+      }
+
+      .Work-item-meta {
+        flex: 0 0 rem-calc(200px);
+        display: flex;
+        align-items: flex-start;
+        gap: rem-calc(14px);
+        font-family: var(--font_code);
+        font-size: rem-calc(14px);
+        margin-top: rem-calc(4px);
+
+        .Dot-Hash-wrapper {
+          display: flex;
+          align-items: center;
+          gap: rem-calc(14px);
+
+          .Dot {
+            width: rem-calc(12px);
+            height: rem-calc(12px);
+            border-radius: 50%;
+            border: 2px solid var(--text_color_faint);
+            background: transparent;
+
+            &.Active {
+              border-color: var(--secondary_color);
+              background: var(--secondary_color);
+            }
+          }
+          .Hash {
+            color: var(--primary_color);
+          }
+        }
+        .Years-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: rem-calc(4px);
+
+          .Years {
+            color: var(--text_color_subtle);
+          }
+          .Duration {
+            color: var(--text_color_soft);
+            line-height: 1;
+          }
+        }
+      }
+
+      .Work-item-content {
+        flex: 999 1 rem-calc(420px);
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: rem-calc(10px);
+      }
+
+      .Work-item-title {
+        font-size: rem-calc(28px);
+        font-weight: 600;
+        letter-spacing: -0.02em;
+
+        .Company {
+          color: var(--text_color_subtle);
+          font-weight: 400;
+        }
+      }
+
+      .Work-item-text {
+        max-width: rem-calc(640px);
+        font-size: rem-calc(17px);
+        line-height: 1.65;
+        color: var(--text_color_soft);
+      }
+    }
+  }
+}
+
+@keyframes log-in {
+  from {
+    opacity: 0;
+    transform: translateY(#{rem-calc(12px)});
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .Section-4 {
+    .Work-title,
+    .Work .Work-item {
+      animation: none;
+    }
+  }
+}

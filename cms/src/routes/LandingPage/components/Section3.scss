@@ -1,138 +1,80 @@
 @import "../../../Functions";
 
 .Section-3 {
-  position: relative;
-  background-color: var(--secondary_color);
-  padding-top: rem-calc(75px);
-
-  .Title {
-    width: fit-content;
-    padding: rem-calc(8px, 31px);
-    margin-left: rem-calc(28px);
-    margin-bottom: 0;
-    border-radius: 0 10px 10px 0;
-    background: var(--white);
-    color: var(--secondary_color);
+  .Section-3-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: rem-calc(56px);
+    padding-top: rem-calc(120px);
+    padding-bottom: rem-calc(120px);
   }
 
-  $margin-left: rem-calc(31px);
-  .Timeline {
-    position: relative;
-    height: 100%;
-    margin: 0 auto;
-    padding: rem-calc(10px, 0px, 75px, 0px);
+  .About {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: rem-calc(64px);
 
-    &:after {
-      content: '';
-      position: absolute;
-      width: rem-calc(6px);
-      background-color: white;
-      top: 0;
-      bottom: 0;
-      left: $margin-left;
-      margin-left: rem-calc(-3px);
-    }
-
-    .Timeline-container {
-      width: fit-content;
-      padding: rem-calc(10px, 25px);
+    .About-portrait {
       position: relative;
-      background-color: inherit;
+      flex: 1 1 rem-calc(300px);
+      max-width: rem-calc(420px);
 
-      &:after {
-        content: '';
-        position: absolute;
-        width: rem-calc(25px);
-        height: rem-calc(25px);
-        right: rem-calc(-17px);
-        background-color: white;
-        border: 4px solid var(--primary_color);
-        top: rem-calc(15px);
-        border-radius: 50%;
-        z-index: 1;
+      img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        object-position: top;
+        border-radius: rem-calc(4px, 120px, 4px, 4px);
+        border: 1px solid var(--border_color_light);
+        background: var(--background_color_lightest);
       }
 
-      &.right {
-        left: $margin-left;
+      .About-portrait-caption {
+        display: flex;
+        justify-content: space-between;
+        margin-top: rem-calc(14px);
+        font-family: var(--font_code);
+        font-size: rem-calc(12px);
+        color: var(--text_color_subtle);
 
-        &:before {
-          content: " ";
-          height: 0;
-          position: absolute;
-          top: rem-calc(22px);
-          width: 0;
-          z-index: 1;
-          left: rem-calc(15px);
-          border: medium solid white;
-          border-width: 10px 10px 10px 0;
-          border-color: transparent white transparent transparent;
-        }
-
-        &:after {
-          left: rem-calc(-18px);
-        }
-      }
-
-      .Timeline-containerContent {
-        padding: rem-calc(15px, 50px, 15px, 40px);
-        background-color: white;
-        position: relative;
-        border-radius: 6px;
-
-        .Timeline-containerContent-subtitle {
-          color: var(--grey);
-        }
-
-        .Timeline-containerContent-content {
-          margin-top: rem-calc(10px);
+        .Size {
+          color: var(--primary_color);
         }
       }
     }
-  }
 
-  .Text-patternWrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-
-    .Text-pattern {
-      width: 200%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      -webkit-mask-image: url("../../../assets/images/code-design-text-repeat.svg");
-      mask-image: url("../../../assets/images/code-design-text-repeat.svg");
-      background-color: var(--white);
-      opacity: 0.05;
-      animation: pan linear 90s infinite;
+    .About-content {
+      flex: 999 1 rem-calc(480px);
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: rem-calc(32px);
     }
-  }
-}
 
-@keyframes pan {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
+    .About-lead {
+      font-size: clamp(#{rem-calc(26px)}, 3vw, #{rem-calc(36px)});
+      line-height: 1.3;
+      font-weight: 600;
+      letter-spacing: -0.02em;
 
+      .Highlight {
+        color: var(--primary_color);
+      }
+    }
 
-@media screen and (max-width: 1400px) {
-  .Section-3 {
-  }
-}
+    .About-text {
+      max-width: rem-calc(620px);
+      font-size: rem-calc(18px);
+      line-height: 1.7;
+      color: var(--text_color_soft);
+    }
 
-@media screen and (max-width: 1150px) {
-  .Section-3 {
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .Section-3 {
+    .About-socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem-calc(10px);
+    }
   }
 }

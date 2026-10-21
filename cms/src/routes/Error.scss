@@ -1,16 +1,28 @@
+@import "../Functions";
+
 .Error-wrapper {
-  height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: rem-calc(24px);
   text-align: center;
 
+  .Error-kicker {
+    font-family: var(--font_code);
+    font-size: rem-calc(14px);
+    color: var(--secondary_color);
+  }
   .Error-title {
-    font-size: 10rem;
-    font-weight: bold;
+    font-size: clamp(#{rem-calc(52px)}, 8vw, #{rem-calc(112px)});
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -0.045em;
   }
   .Error-subtitle {
-    font-size: 1.5rem;
+    font-family: var(--font_code);
+    font-size: rem-calc(16px);
+    color: var(--text_color_subtle);
   }
 }

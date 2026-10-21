@@ -1,18 +1,24 @@
 import './Footer.scss';
 
-import React from 'react';
 import {DateTime} from "luxon";
 
-function Navbar() {
+function Footer() {
 
     return (
-        <>
-            <div className="Section-separatorTop"></div>
-            <div className="Footer">
-                <div>&copy; 2000 - {DateTime.now().year} | Martijn Kuipers</div>
+        <footer className="Footer">
+            <div className="Footer-bar Container">
+                <div className="Footer-group">
+                    <span><span className="Branch">●</span> main</span>
+                    <span>&copy; {DateTime.now().year} Martijn Kuipers</span>
+                </div>
+                <div className="Footer-group">
+                    <span>designed &amp; coded by hand</span>
+                    <span>UTF-8</span>
+                    <span>Ln 404, Col 1</span>
+                </div>
             </div>
-        </>
+        </footer>
     );
 }
 
-export default Navbar;
+export default Footer;

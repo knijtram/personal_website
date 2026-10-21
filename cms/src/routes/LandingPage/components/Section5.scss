@@ -1,0 +1,390 @@
+@import "../../../Functions";
+
+// Height of one row in the Typography slot reel, shared by every Design chip so they line up
+$reel-height: 1.25em;
+
+.Section-5 {
+  border-top: 1px solid var(--border_color);
+
+  .Section-5-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: rem-calc(56px);
+    padding-top: rem-calc(120px);
+    padding-bottom: rem-calc(120px);
+  }
+
+  .Toolkit {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, #{rem-calc(320px)}), 1fr));
+    gap: rem-calc(24px);
+
+    .Toolkit-card {
+      display: flex;
+      flex-direction: column;
+      gap: rem-calc(28px);
+      padding: rem-calc(36px);
+      border: 1px solid var(--border_color_light);
+      border-radius: rem-calc(16px);
+      background: var(--background_color_lighter);
+
+      .Toolkit-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem-calc(16px);
+      }
+
+      .Toolkit-card-title {
+        &.Code {
+          font-family: var(--font_code);
+          font-size: rem-calc(30px);
+          font-weight: 700;
+          color: var(--secondary_color);
+        }
+
+        &.Design {
+          font-size: rem-calc(34px);
+          font-weight: 800;
+          letter-spacing: -0.03em;
+          color: var(--primary_color);
+        }
+      }
+
+      .Toolkit-card-caption {
+        font-family: var(--font_code);
+        font-size: rem-calc(13px);
+        color: var(--text_color_subtle);
+      }
+
+      .Toolkit-card-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem-calc(10px);
+        list-style: none;
+
+        .Typography {
+          cursor: pointer;
+
+          .Typography-window {
+            height: $reel-height;
+            overflow: hidden;
+          }
+
+          .Typography-reel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &.Spin {
+              animation: slot-spin 3.2s cubic-bezier(0.1, 0.9, 0.2, 1);
+            }
+
+            span {
+              display: block;
+              height: $reel-height;
+              line-height: $reel-height;
+              white-space: nowrap;
+            }
+
+            .Mono {
+              font-family: var(--font_code);
+            }
+            .Serif {
+              font-family: var(--font_serif);
+            }
+          }
+        }
+
+        .Layout {
+          position: relative;
+          overflow: hidden;
+          isolation: isolate;
+
+          &:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            opacity: 0;
+            transform: scale(1.15);
+            transition: opacity 0.3s ease, transform 0.4s ease;
+            @include line-grid(var(--grid_line_color), 10px);
+          }
+
+          &:hover:before {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        .Motion {
+          cursor: pointer;
+
+          &.Animate {
+            animation: motion-pulse 2s ease infinite;
+          }
+        }
+
+        .Prototyping {
+          position: relative;
+          cursor: default;
+
+          .Selection {
+            position: absolute;
+            inset: rem-calc(-4px);
+            z-index: 2;
+            border: 1.5px solid var(--primary_color);
+            opacity: 0;
+            transform: scale(1.08);
+            transition: opacity 0.2s ease, transform 0.3s ease;
+            pointer-events: none;
+
+            .Handle {
+              @include selection-handle(var(--primary_color));
+              transform: scale(0);
+              transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+              &.TopLeft {
+                left: rem-calc(-5px);
+                top: rem-calc(-5px);
+              }
+              &.TopRight {
+                right: rem-calc(-5px);
+                top: rem-calc(-5px);
+              }
+              &.BottomLeft {
+                left: rem-calc(-5px);
+                bottom: rem-calc(-5px);
+              }
+              &.BottomRight {
+                right: rem-calc(-5px);
+                bottom: rem-calc(-5px);
+              }
+            }
+
+            .Size {
+              position: absolute;
+              left: 50%;
+              bottom: rem-calc(-28px);
+              padding: rem-calc(2px, 6px);
+              border-radius: rem-calc(4px);
+              background: var(--primary_color);
+              color: var(--background_color);
+              font-family: var(--font_code);
+              font-size: rem-calc(11px);
+              font-weight: 500;
+              line-height: 1.4;
+              white-space: nowrap;
+              opacity: 0;
+              transform: translate(-50%, #{rem-calc(-4px)});
+              transition: opacity 0.2s ease, transform 0.2s ease;
+            }
+          }
+
+          // Delays only on hover, so the selection appears step by step but disappears at once
+          &:hover .Selection {
+            opacity: 1;
+            transform: scale(1);
+
+            .Handle {
+              transform: scale(1);
+
+              @each $handle, $delay in (TopLeft: 0.1s, TopRight: 0.15s, BottomRight: 0.2s, BottomLeft: 0.25s) {
+                &.#{$handle} {
+                  transition-delay: $delay;
+                }
+              }
+            }
+
+            .Size {
+              opacity: 1;
+              transform: translate(-50%, 0);
+              transition-delay: 0.3s;
+            }
+          }
+        }
+
+        // A cursor glides in and clicks: the chip presses down and a ripple spreads from the click point
+        .Interface {
+          position: relative;
+          cursor: pointer;
+          isolation: isolate;
+
+          .Interface-rippleClip {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            border-radius: inherit;
+            overflow: hidden;
+            pointer-events: none;
+
+            .Ripple {
+              position: absolute;
+              left: 65%;
+              top: 55%;
+              width: rem-calc(140px);
+              height: rem-calc(140px);
+              border-radius: 50%;
+              background: var(--secondary_color);
+              opacity: 0;
+              transform: translate(-50%, -50%) scale(0);
+            }
+          }
+
+          .Cursor {
+            position: absolute;
+            left: 65%;
+            top: 55%;
+            z-index: 2;
+            width: rem-calc(18px);
+            height: rem-calc(18px);
+            fill: var(--background_color);
+            stroke: var(--secondary_color);
+            stroke-width: 2;
+            opacity: 0;
+            pointer-events: none;
+          }
+
+          &.Clicking {
+            animation: ui-press 1.4s ease;
+
+            .Ripple {
+              animation: ui-ripple 1.4s ease-out;
+            }
+
+            .Cursor {
+              animation: ui-cursor 1.4s ease;
+            }
+          }
+        }
+
+        li {
+          padding: rem-calc(10px, 16px);
+        }
+
+        &.Code {
+          font-family: var(--font_code);
+          font-size: rem-calc(15px);
+
+          li {
+            border-radius: rem-calc(8px);
+            background: var(--chip_color);
+          }
+        }
+
+        &.Design {
+          font-size: rem-calc(16px);
+          font-weight: 600;
+
+          li {
+            line-height: $reel-height;
+            border-radius: rem-calc(999px);
+            border: 1.5px solid var(--border_color_lighter);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes slot-spin {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-6 * $reel-height);
+  }
+}
+
+@keyframes motion-pulse {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    transform: translateX(#{rem-calc(-4px)}) scale(1.03);
+  }
+  50% {
+    transform: translateX(0) scale(1.05);
+  }
+  75% {
+    transform: translateX(#{rem-calc(4px)}) scale(1.03);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes ui-cursor {
+  0% {
+    opacity: 0;
+    transform: translate(#{rem-calc(40px)}, #{rem-calc(28px)});
+  }
+  15% {
+    opacity: 1;
+  }
+  45% {
+    transform: translate(0, 0) scale(1);
+  }
+  52% {
+    transform: translate(0, 0) scale(0.8);
+  }
+  60% {
+    transform: translate(0, 0) scale(1);
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes ui-press {
+  0%, 45% {
+    transform: scale(1);
+  }
+  52% {
+    transform: scale(0.94);
+  }
+  65%, 100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes ui-ripple {
+  0%, 50% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  52% {
+    opacity: 0.35;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .Section-5 {
+    .Typography-reel.Spin,
+    .Motion.Animate,
+    .Interface.Clicking,
+    .Interface.Clicking .Ripple,
+    .Interface.Clicking .Cursor {
+      animation: none;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .Section-5 {
+    .Toolkit {
+      .Toolkit-card {
+        padding: rem-calc(24px);
+      }
+    }
+  }
+}

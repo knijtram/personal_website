@@ -1,0 +1,73 @@
+@import "../../../Functions";
+
+.Section-6 {
+  border-top: 1px solid var(--border_color);
+
+  .Section-6-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: rem-calc(40px);
+    padding-top: rem-calc(140px);
+    padding-bottom: rem-calc(120px);
+  }
+
+  .Contact-kicker {
+    font-family: var(--font_code);
+    font-size: rem-calc(14px);
+    color: var(--secondary_color);
+  }
+
+  .Contact-title {
+    max-width: rem-calc(1000px);
+    font-size: clamp(#{rem-calc(48px)}, 8vw, #{rem-calc(120px)});
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+
+    .Highlight {
+      color: var(--primary_color);
+      font-style: italic;
+      font-weight: 600;
+    }
+  }
+
+  .Contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: rem-calc(16px);
+
+    .Button {
+      max-width: 100%;
+      overflow-wrap: anywhere;
+
+      &:hover {
+        .Icon {
+          animation: pointer-bounce 1s linear infinite;
+
+          @keyframes pointer-bounce {
+            0% {
+              transform: translate(0, 0);
+            }
+            25% {
+              transform: translate(-2px, 2px);
+            }
+            75% {
+              transform: translate(2px, -2px);
+            }
+            100% {
+              transform: translate(0, 0);
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .Contact-note {
+    font-family: var(--font_code);
+    font-size: rem-calc(14px);
+    color: var(--text_color_subtle);
+  }
+}
