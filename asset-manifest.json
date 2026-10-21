@@ -1,32 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.b3211b6f.css",
-    "main.js": "/static/js/main.fd73dfd3.js",
+    "main.css": "/static/css/main.2cd0235b.css",
+    "main.js": "/static/js/main.a0a604f5.js",
     "static/js/453.0bd92e5f.chunk.js": "/static/js/453.0bd92e5f.chunk.js",
-    "static/media/background-overlay.mp4": "/static/media/background-overlay.eb82ce2985c09b24cb37.mp4",
-    "static/media/Decalotype-BlackItalic.woff2": "/static/media/Decalotype-BlackItalic.8804aa75f603d0e17bfa.woff2",
-    "static/media/Decalotype-ExtraBoldItalic.woff2": "/static/media/Decalotype-ExtraBoldItalic.35bc8fb84c852570c1b3.woff2",
-    "static/media/Decalotype-BoldItalic.woff2": "/static/media/Decalotype-BoldItalic.b8ff28fca20825265f2f.woff2",
-    "static/media/Decalotype-SemiBoldItalic.woff2": "/static/media/Decalotype-SemiBoldItalic.993bcd118a5ec4648f9d.woff2",
-    "static/media/Decalotype-MediumItalic.woff2": "/static/media/Decalotype-MediumItalic.5b9ef9236c2f01c2302a.woff2",
-    "static/media/Decalotype-Italic.woff2": "/static/media/Decalotype-Italic.1e992815149fb1a843b0.woff2",
-    "static/media/Decalotype-ExtraBold.woff2": "/static/media/Decalotype-ExtraBold.55ec9503b1352f260ea3.woff2",
-    "static/media/Decalotype-Black.woff2": "/static/media/Decalotype-Black.3e8d55c35cc55053082e.woff2",
-    "static/media/Decalotype-SemiBold.woff2": "/static/media/Decalotype-SemiBold.3461d05e901e924926de.woff2",
-    "static/media/Decalotype-Bold.woff2": "/static/media/Decalotype-Bold.dd68beb75cd66d5445f8.woff2",
-    "static/media/Decalotype-LightItalic.woff2": "/static/media/Decalotype-LightItalic.67b9b6b33ebf0ff18f16.woff2",
-    "static/media/Decalotype-Medium.woff2": "/static/media/Decalotype-Medium.cf983c7686a9e72c8613.woff2",
-    "static/media/Decalotype-Regular.woff2": "/static/media/Decalotype-Regular.1894e12cde01d1d7ab0b.woff2",
-    "static/media/Decalotype-Light.woff2": "/static/media/Decalotype-Light.342e02f1a73f7e9f6945.woff2",
-    "static/media/code-design-text-repeat.svg": "/static/media/code-design-text-repeat.bae9aa066af23226070e.svg",
+    "static/media/BricolageGrotesque-Regular.woff2": "/static/media/BricolageGrotesque-Regular.2359df1105db80b72740.woff2",
+    "static/media/BricolageGrotesque-SemiBold.woff2": "/static/media/BricolageGrotesque-SemiBold.e44bcfa0e39d3faf6e8b.woff2",
+    "static/media/BricolageGrotesque-ExtraBold.woff2": "/static/media/BricolageGrotesque-ExtraBold.a6d059ce006a751b91d2.woff2",
+    "static/media/JetBrainsMono-Bold.woff2": "/static/media/JetBrainsMono-Bold.ce1e40901d7a0d88d483.woff2",
+    "static/media/JetBrainsMono-Medium.woff2": "/static/media/JetBrainsMono-Medium.bb50084be2b43ba7b98c.woff2",
+    "static/media/JetBrainsMono-Regular.woff2": "/static/media/JetBrainsMono-Regular.d04352f240062b100fba.woff2",
     "index.html": "/index.html",
-    "static/media/burger-menu.svg": "/static/media/burger-menu.ca0c886b7ee409e83658407634d22c9e.svg",
-    "main.b3211b6f.css.map": "/static/css/main.b3211b6f.css.map",
-    "main.fd73dfd3.js.map": "/static/js/main.fd73dfd3.js.map",
+    "main.2cd0235b.css.map": "/static/css/main.2cd0235b.css.map",
+    "main.a0a604f5.js.map": "/static/js/main.a0a604f5.js.map",
     "453.0bd92e5f.chunk.js.map": "/static/js/453.0bd92e5f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3211b6f.css",
-    "static/js/main.fd73dfd3.js"
+    "static/css/main.2cd0235b.css",
+    "static/js/main.a0a604f5.js"
   ]
 }
