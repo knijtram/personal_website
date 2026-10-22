@@ -46,7 +46,14 @@ function Section3() {
             <div className="Section-3-wrapper Container">
                 <div className="Section-header">
                     <h2><span className="Number">01</span>About</h2>
-                    <p className="Caption">whoami</p>
+                    <p className="Caption">
+                        whoami
+                        <span className="QuestionMark QuestionMark-1">?</span>
+                        <span className="QuestionMark QuestionMark-2">?</span>
+                        <span className="QuestionMark QuestionMark-3">?</span>
+                        <span className="QuestionMark QuestionMark-4">?</span>
+                        <span className="QuestionMark QuestionMark-5">?</span>
+                    </p>
                 </div>
                 <div className="About">
                     <figure className="About-portrait">

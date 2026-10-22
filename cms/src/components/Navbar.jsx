@@ -1,13 +1,12 @@
 import './Navbar.scss';
 
-import React from 'react';
 import {Link} from "react-router-dom";
 
 function Navbar() {
     const links = [
-        {label: '~/about', href: '/#about'},
-        {label: '~/work', href: '/#work'},
-        {label: '~/toolkit', href: '/#toolkit'},
+        {label: '~/about', labelShort: '~/a', href: '/#about'},
+        {label: '~/experience', labelShort: '~/e', href: '/#experience'},
+        {label: '~/toolkit', labelShort: '~/t', href: '/#toolkit'},
     ];
 
     return (
@@ -18,7 +17,10 @@ function Navbar() {
                 </Link>
                 <div className="Navbar-links">
                     {links.map((link) => (
-                        <a key={link.href} className="Navbar-link" href={link.href}>{link.label}</a>
+                        <>
+                            <a key={link.href} className="Navbar-link" href={link.href}>{link.label}</a>
+                            <a key={link.href} className="Navbar-link short" href={link.href}>{link.labelShort}</a>
+                        </>
                     ))}
                     <a className="Navbar-link Highlight" href="/#contact">contact()</a>
                 </div>

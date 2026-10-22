@@ -35,7 +35,7 @@
     font-size: rem-calc(14px);
 
     .Navbar-link {
-      padding: rem-calc(12px, 14px);
+      padding: rem-calc(8px, 12px);
       border-radius: rem-calc(999px);
       color: var(--text_color_muted);
       transition: background 0.25s, color 0.25s ease;
@@ -47,9 +47,27 @@
       &.Highlight {
         background: var(--text_color);
         color: var(--background_color);
+        margin-left: rem-calc(4px);
 
         &:hover {
           background: var(--white);
+        }
+      }
+
+      &.short {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .Navbar {
+    .Navbar-links {
+      .Navbar-link:not(.Highlight) {
+        display: none;
+
+        &.short {
+          display: block;
         }
       }
     }

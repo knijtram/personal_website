@@ -60,7 +60,7 @@ function Section4() {
             duration: '2 years',
             role: 'Master of Science, Computer Science & Engineering',
             company: 'Technische Universiteit Eindhoven',
-            text: 'System architecture and distributed systems.',
+            text: 'System architecture, Machine Learning, Security and distributed systems.',
             tag: 'HEAD',
         },
         {
@@ -111,7 +111,7 @@ function Section4() {
     };
 
     return (
-        <section id="work" className="Section-4">
+        <section id="experience" className="Section-4">
             <div className="Section-4-wrapper Container">
                 <div className="Section-header">
                     <h2><span className="Number">02</span><span key={log} className="Work-title">{logs[log].title}</span></h2>
